@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+  *{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+   }
+   body{
+    /* background-color: black; */
+    color: white;
+   }
+   .header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 20px 10%;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+   }
+   .logo{
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+ }
+ .logo::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(16, 16, 16);
+    animation: showright 1s ease forwards;
+    animation-delay: .4s;
+ }
+ .logo:hover{
+    scale: 1.5;
+    transition: all 2s;
+    text-shadow: 3px 2px 2px white;
+ }
+ .navbar ul li{
+    display: inline-block;
+    text-transform: uppercase;
+    /* display: none; */
+    /* margin: 0 5px ; */
+    /* line-height: 80px; */
+ }
+ .navbar a{
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+    font-weight:500;
+    margin-left: 35px;
+    transition:.3s;
+}
+ .navbar a:hover,
+ .navbar a.active{
+    color:rgb(45, 200, 200);
+ }
+ .home{background: url(https://www.shutterstock.com/image-photo/boy-looking-right-side-black-260nw-567266323.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 8%;
+ }
+ .home-conteny{
+    /* background-color: chartreuse; */
+    max-width: 550px;
+
+ }
+ .home-conteny h1{
+    position: sticky;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+ }
+ .home-conteny h1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(16, 16, 16);
+    animation: showright 1s ease forwards;
+    animation-delay: .1s;
+  }
+ .home-conteny h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(24, 101, 218);
+ }
+ .home-conteny h3:hover{
+    /* text-align: center; */
+    width: 2;
+    height: 2;
+    scale: 1.1;
+    text-shadow: 3px 3px 5px blue;
+    transition: 3s;
+    
+ }
+ .home-conteny h3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(16, 16, 16);
+    animation: showright 1s ease forwards;
+    animation-delay: 1.3s;
+  }
+
+ .home-conteny p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+ }
+ .home-conteny p::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(16, 16, 16);
+    animation: showright 1s ease forwards;
+    animation-delay: 1.4s;
+  }
+.home-conteny .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    /* background-color: rgb(226, 174, 43); */
+}
+.home-conteny .btn-box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(16, 16, 16);
+    animation: showright 1s ease forwards;
+    animation-delay: 1.4s;
+  }
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: dodgerblue;
+    border: 2px solid dodgerblue;
+    border-radius: 9px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box a:nth-child(1):hover{
+    color: deepskyblue;
+}
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: deepskyblue;
+
+
+}
+.btn-box a:nth-child(2):hover{
+    color: black;
+}
+.btn-box a:nth-child(2)::before{
+    background-color: deepskyblue;
+}
+.btn-box a::before{
+    content:"" ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(7, 7, 7);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid rgb(24, 98, 226) ;
+    border-radius: 50%;
+   font-size: 20px;
+   color: rgb(78, 3, 218);
+   text-decoration: none;
+   z-index: 1;
+   overflow: hidden;
+   transition: .5s;
+   
+}
+.home-sci a:hover{
+    color: black;
+}
+.home-sci a::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color:rgb(4, 143, 229);
+    z-index: -1;
+    transition: .5s;
+
+}
+.home-sci a:hover::before {
+    width: 100%;
+}
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 600px;
+    height: 100%;
+    background-color: transparent;
+    /* border: 2px solid red; */
+    transition: 2s;
+
+
+}
+.home-imgHover:hover{
+    background-color: rgb(8, 8, 7);
+    opacity: 0.7;
+}
+@media (max-width:579px) {
+    ul{
+        position: fixed;
+        top: 60px;
+        left: 380px;
+        padding: 2px;
+        /* background-color: rgb(44, 166, 166); */
+        text-align: center;
+        z-index: 1000;
+
+    }
+    .navbar ul li{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    a:hover,a.action{
+        background-color:transparent;
+        color: darkturquoise;
+    }
+    .home{
+        background-size: cover;
+        background-position: bottom;
+    }
+    
+}
+@keyframes showright{
+    100%{
+        width: 0;
+    }
+}
+.checkbtn{
+    font-size: 30px;
+    line-height: 80px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    color: rgb(17, 74, 209);
+}
+#check{
+    display: none;
+}
+
+label:checked {
+  width: 100px;
+  height: 200px;
+}
+
+     </style>
+<body>
+    <header class="header">
+       
+        <a href="#" class="logo">Aman..</a>
+        <nav class="navbar">
+            <ul> <li> <a href="Home" class="active">Home</a></li>
+                <li><a href="About">About</a></li>
+                <li> <a href="Server">Server</a></li>
+                <li> <a href="Portfolio">Portfolio</a></li>
+                <li><a href="Contact">Contact</a></li>
+            </ul>
+            </nav>
+            <div><input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class='bx bx-menu'></i>
+            
+                   </label>
+            </div>
+    </header>
+    <section class="home">
+        <div class="home-conteny">
+            <h1>Hi, I'm Aman Gupta</h1>
+            <h3>Tech boy</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Voluptate maxime sunt, cupiditate tempore culpa quibusdam. 
+                Nisi exercitationem quod unde soluta molestiae id placeat, quaerat voluptate vel laudantium?
+            </p>
+            <div class="btn-box">
+                <a href="#">Hire me</a>
+                <a href="#">Let's Talk</a>
+            </div>
+    
+        </div>
+        <div class="home-sci">
+            <a href=""><i class='bx bxl-facebook'></i></a>
+            <a href=""><i class='bx bxl-twitter' ></i></a>
+            <a href=""><i class='bx bxl-instagram' ></i></a>
+        </div>
+        <span class="home-imgHover"></span>
+       
+    </section>
+</body>
+</html>
